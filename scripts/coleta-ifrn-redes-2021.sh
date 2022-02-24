@@ -70,11 +70,13 @@ cd ..
 tar zcf ${NOME_DIR_COLETAS}.tar.gz ${NOME_DIR_COLETAS}
 
 echo "Por gentileza, abra, no Windows Explorer, a pasta:"
-echo "    Documentos\Redes"
+echo "    ${USERPROFILE}\Documents\Ifrn\Redes"
 echo 
 echo "E envie o arquivo de coleta (\"${NOME_DIR_COLETAS}.tar.gz\") no formulário"
 echo " disponibilizado pelo Google Sala de Aula."
 echo
+
+explorer "${USERPROFILE}\Documents\Ifrn\Redes"
 
 echo "Pressione a tecla <ENTER> para sair."
 read
