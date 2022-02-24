@@ -48,3 +48,4 @@ echo ${PWD_BI:1:1}:${PWD_BI:2:60}
 echo "E envie o arquivo coleta-${matricula}.tar.gz"
 read
 
+
