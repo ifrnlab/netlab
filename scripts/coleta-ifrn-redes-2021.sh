@@ -40,7 +40,11 @@ hostname > hostname.txt
 
 ## Dados das conexões de sua máquina
 # - End. IP de rede privada, com máscara, roteador padrão e servidores DNS
-ipconfig /all > ipconfig.txt
+
+# Correção: How to run Windows command prompt utilities options in Git Bash (how to specify /slash options)? - Super User
+# https://superuser.com/questions/1142397/how-to-run-windows-command-prompt-utilities-options-in-git-bash-how-to-specify
+
+ipconfig -all > ipconfig.txt
 
 ## Rotas
 route print -4 > rotas.txt
