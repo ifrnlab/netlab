@@ -17,7 +17,7 @@ echo "Criando pasta para coleta dos dados..."
 mkdir -pv ${DIR_COLETAS} && cd $_
 
 # Dados de seu usuário
-echo "Salvando seus dados de seu usuário e da máquina..."
+echo "Salvando os dados de seu usuário e da máquina..."
 echo ${matricula} > matricula.txt
 echo ${escolar} > escolar.txt
 echo ${USERNAME} > username.txt
@@ -56,15 +56,21 @@ netstat -an -p udp > conexoes-udp.txt
 # Aplicação não será necessário, pois estamos interessados só nas portas
 
 # Abertura do VS Code para revisão dos dados coletados
-echo "Vamos entrar no VS Code para revisar os dados coletados?"
+echo "Abrindo VS Code na pasta com os dados coletados..."
 code .
 
-echo "Por gentileza, abra, no Windows Explorer a pasta:"
-echo "    Documentos\Ifrn\Redes"
+# Empacotamento e compactação dos arquivos
+
+echo "Compactando pasta de dados para arquivo \"${NOME_DIR_COLETAS}.tar.gz\""
+cd ..
+tar zcf ${NOME_DIR_COLETAS}.tar.gz ${NOME_DIR_COLETAS}
+
+echo "Por gentileza, abra, no Windows Explorer, a pasta:"
+echo "    Documentos\Redes"
 echo 
-echo "E veja envie o arquivo de coleta pelo Google Sala de Aula."
+echo "E envie o arquivo de coleta (\"${NOME_DIR_COLETAS}.tar.gz\") no formulário"
+echo " disponibilizado pelo Google Sala de Aula."
+echo
 
 echo "Pressione a tecla <ENTER> para sair."
-
-
-
+read
