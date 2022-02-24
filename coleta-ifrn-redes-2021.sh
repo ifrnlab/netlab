@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -v
 
 # Onde salvar os dados
 echo -n "Matrícula: "
