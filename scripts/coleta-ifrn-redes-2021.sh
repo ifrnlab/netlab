@@ -37,6 +37,9 @@ netsh wlan show interfaces > netsh-wlan-show-interfaces.txt
 
 # Rede
 
+## Nome da máquina
+hostname > hostname.txt
+
 ## Dados das conexões de sua máquina
 # - End. IP de rede privada, com máscara, roteador padrão e servidores DNS
 ipconfig /all > ipconfig.txt
