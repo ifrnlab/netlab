@@ -9,8 +9,6 @@ read escolar
 
 HOSTNAME=$(hostname)
 WHOAMI=$(whoami)
-CONTA_OULU=$(echo ${escolar} | cut -d@ -f1)
-FQDN_OULU="oulu.ifrn.edu.br"
 DIR_COLETAS=${HOME}/Documents/Ifrn/Redes/Coleta-${matricula}-${HOSTNAME}
 ARQ_COLETAS=${DIR_COLETAS}.tar.gz
 NOME_DIR_COLETAS=$(basename ${DIR_COLETAS})
@@ -39,7 +37,6 @@ netsh wlan show interfaces > netsh-wlan-show-interfaces.txt
 
 ## Nome da máquina
 hostname > hostname.txt
-whoami > whoami.txt
 
 ## Dados das conexões de sua máquina
 # - End. IP de rede privada, com máscara, roteador padrão e servidores DNS
