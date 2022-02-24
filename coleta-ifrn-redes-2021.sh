@@ -43,7 +43,7 @@ cd ..
 tar zcvf coleta-${matricula}.tar.gz Coleta-${matricula}
 
 echo "Por gentileza, abra, em seu Explorador do Windows (Windows Explorer), a pasta:"
-echo ${PWD}
+echo ${CWD_BI:1:1}:${CWD_BI:2:60}
 
 echo "E envie o arquivo coleta-${matricula}.tar.gz"
 read
