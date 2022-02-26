@@ -5,28 +5,25 @@ graph BT
 
   %% Declaração de um sub-grafo para cada camada
   
-  subgraph "Pilha do TCP/IP"
-    subgraph Aplicação
-      dhcp[DHCP]
-      dns[DNS]
-      http[HTTP]
-      imap[IMAP]
-      pop3[POP3]
-      smb[SMP]
-      smtp[SMTP]
-      snmp[SNMP]
-      ssh[SSH]
-    end
+  subgraph Aplicação
+    dhcp[DHCP]
+    dns[DNS]
+    http[HTTP]
+    imap[IMAP]
+    pop3[POP3]
+    smb[SMP]
+    smtp[SMTP]
+    snmp[SNMP]
+    ssh[SSH]
+  end
 
-    subgraph Transporte
-      tcp[TCP]
-      udp[UDP]
-    end
+  subgraph Transporte
+    tcp[TCP]
+    udp[UDP]
+  end
 
-    subgraph Rede
-      ipv4[IPv4]
-      ipv6[IPv6]
-    end
+  subgraph Rede
+    ipv4[IPv4]
   end
   
   subgraph Enlace
@@ -45,8 +42,8 @@ graph BT
   ar --- wifi
   
   
-  ethernet & wifi --- ipv4 & ipv6
-  ipv4 & ipv6 --- tcp & udp
+  ethernet & wifi --- ipv4
+  ipv4 --- tcp & udp
   udp --- dhcp & dns & snmp
   tcp --- http & imap & pop3 & smb & smtp & ssh
 ```
