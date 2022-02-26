@@ -12,12 +12,11 @@ graph TD
   
   %% Redes
   ethernet[fa:fa-network-wired Ethernet]
-  wifi[fa:fa-wifi Wifi]
-  internet[fa:fa-cloud Internet]
+  wifi["fa:fa-wifi Wifi"]
+  internet[fa:fa-globe Internet]
   
   %% Ligações entre redes e dispositivos
   pc --- ethernet
   tv & fone & notebook --- wifi
   ethernet & wifi --- roteador --- internet
-
 ```
