@@ -11,7 +11,7 @@ graph TD
     notebook[fa:fa-laptop Notebook]
 
     %% Redes
-    subgraph Redes do VirtualBox
+    subgraph Redes Virtuais
         ifrnlab(fa:fa-network-wired ifrnlab)
         hostonly("fa:fa-network-wired Host-only")
     end
