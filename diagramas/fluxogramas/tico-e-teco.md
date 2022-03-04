@@ -14,11 +14,15 @@ graph TD
     subgraph Redes do VirtualBox
         ifrnlab(fa:fa-network-wired ifrnlab)
         hostonly("fa:fa-network-wired Host-only")
-        nat[fa:fa-network-wired NAT]
     end
 
     internet(fa:fa-globe Internet)
     
     %% Ligações entre redes e dispositivos
-    tico & teco --- ifrnlab & hostonly & nat --- notebook --- internet
+    tico --- |10.9.8.3| ifrnlab
+    tico --- |192.168.56.19| hostonly
+    teco --- |10.9.8.5| ifrnlab
+    teco --- |192.168.56.20| hostonly
+
+    hostonly --- notebook --- internet
 ```
