@@ -24,5 +24,5 @@ graph TD
     teco --- |10.9.8.5| ifrnlab
     teco --- |192.168.56.20| hostonly
 
-    hostonly --- notebook --- internet
+    hostonly --- |192.168.56.1| notebook --- internet
 ```
