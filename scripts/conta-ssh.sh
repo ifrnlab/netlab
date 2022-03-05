@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Constantes
-SSH_DIR=/tmp/ssh
+SSH_DIR=~/.ssh
 SSH_CONF=${SSH_DIR}/config
 SSH_KEY=${SSH_DIR}/id_ed25519
 
