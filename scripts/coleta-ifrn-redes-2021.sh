@@ -49,6 +49,9 @@ ipconfig -all > ipconfig.txt
 ## Rotas
 route print -4 > rotas.txt
 
+## Caminho para IFRN
+tracert -d -4 oulu.ifrn.edu.br > caminho-ifrn.txt
+
 ## Endereço IP público
 curl -s ifconfig.me > ifconfig-me.txt
 
