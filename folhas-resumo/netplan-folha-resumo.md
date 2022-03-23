@@ -1,4 +1,20 @@
-# netplan: Folha-resumo
+
+---
+title: "Folha-resumo: netplan"
+author: Jurandy Soares
+date: 23/mar/2022
+...
+
+# netplan: Folha-resumo [^1]
+
+Nome das interfaces de rede. Execute:
+
+- `ip -br link`
+
+Endereços IPv4 das interfaces de rede. Execute:
+
+- `ip -br -c -4 address`
+
 
 Edite o arquivo YAML que deve existir em: `/etc/netplan`. Para descobrir o nome do arquivo, execute:
 
@@ -8,7 +24,17 @@ Edite o arquivo com seu editor para terminal favorito, como `nano`, `vim` ou `mi
 
 No exemplo abaixo, você pode revisar um plano de rede usando IPv4 e IPv6. Substituímos os endereços por IPs casuais.
 
-```yaml
+Você pode testar e aplicar suas configurações do netplan executando os seguintes comandos:
+
+- `sudo netplan try`
+- `sudo netplan apply`
+
+
+\pagebreak
+
+## Exemplo de um arquivo `/etc/netplan/*.yaml`
+
+```{.yaml .numberLines}
 # Este arquivo descreve as interfaces de rede disponíveis em seu sistema
 # Para maiores informações, veja netplan(5).
 # Execute: man 5 netplan
@@ -19,8 +45,10 @@ network:
   version: 2
   renderer: networkd
   
+  # Bloco de interfaces do tipo Ethernet
   ethernets:
   
+    # Nome da interface a ser configurada (Execute: ip -br link)
     eth0:
     
       # Desabilita o DHCP
@@ -45,7 +73,5 @@ network:
           - 123:4567:ab12:3:192:168:1:1
           - 123:4567:ab12:3:192:168:1:2
 ```
-Você pode testar e aplicar suas configurações do netplan executando os seguintes comandos:
 
-- `sudo netplan try`
-- `sudo netplan apply`
+[^1]: Adaptado de <https://technet.cloud4you.biz/en/cheatsheet-netplan-beispiel-mit-ipv4-und-ipv6-konfiguration/>
