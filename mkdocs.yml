@@ -1,0 +1,20 @@
+site_name: "Info3v2021par: Nossas Redes"
+site_author: Info3v2021par
+
+theme: material
+
+plugins:
+  - mermaid2
+
+nav:
+  - Início: index.md
+  - Mermaid:
+    - mermaid/index.md
+    - mermaid/jornada.md
+    - mermaid/fluxogramas.md
+    - mermaid/pizza.md
+    - mermaid/sequencia.md
+    - mermaid/git.md
+    - mermaid/atividades.md
+    - mermaid/estados.md
+
