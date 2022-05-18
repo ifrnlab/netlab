@@ -1,1 +1,3 @@
-$ip_publico = (Invoke-WebRequest https://ifconfig.me/ip).Content
+function Get-IPPublico {
+  (Invoke-WebRequest -Uri "https://ifconfig.me/ip" -UseBasicParsing).Content
+} 
