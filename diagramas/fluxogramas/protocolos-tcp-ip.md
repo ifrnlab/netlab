@@ -11,7 +11,7 @@ graph BT
     http[HTTP]
     imap[IMAP]
     pop3[POP3]
-    smb[SMP]
+    smb[SMB]
     smtp[SMTP]
     snmp[SNMP]
     ssh[SSH]
