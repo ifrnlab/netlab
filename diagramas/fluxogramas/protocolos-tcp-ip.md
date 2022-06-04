@@ -12,6 +12,8 @@ graph BT
     imap[IMAP]
     pop3[POP3]
     smb[SMB]
+    rdp[RDP]
+    vnc[VNC]
     smtp[SMTP]
     snmp[SNMP]
     ssh[SSH]
@@ -46,5 +48,5 @@ graph BT
   ethernet & wifi --- ipv4
   ipv4 --- tcp & udp
   udp --- dhcp & dns & snmp & ntp
-  tcp --- http & imap & pop3 & smb & smtp & ssh
+  tcp --- http & imap & pop3 & smb & smtp & ssh & rdp & vnc
 ```
