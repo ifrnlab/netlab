@@ -15,6 +15,7 @@ graph BT
     smtp[SMTP]
     snmp[SNMP]
     ssh[SSH]
+    ntp[NTP]
   end
 
   subgraph Transporte
@@ -44,6 +45,6 @@ graph BT
   
   ethernet & wifi --- ipv4
   ipv4 --- tcp & udp
-  udp --- dhcp & dns & snmp
+  udp --- dhcp & dns & snmp & ntp
   tcp --- http & imap & pop3 & smb & smtp & ssh
 ```
