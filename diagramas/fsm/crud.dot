@@ -1,0 +1,19 @@
+digraph G {
+   node[shape="rectangle"];
+   inicio[shape="doublecircle"];
+   principal[label="principal()"];
+   criar[label="criar()"];
+   listar[label="listar()"];
+   alterar[label="alterar()"];
+   excluir[label="excluir()"];
+   sair[label="sair()"];
+   fim[shape="circle"];
+   inicio -> principal;
+   principal -> criar[label="1"];
+   principal -> listar[label="2"];
+   principal -> sair[label="5"];
+   sair -> fim;
+   principal -> alterar[label="3"];
+   principal -> excluir[label="4"];
+   {criar,listar,alterar,excluir} -> principal;
+}
